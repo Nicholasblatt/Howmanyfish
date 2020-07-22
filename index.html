@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>How Many Fish?</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <h1>How many fish are in your sea?</h1>
+  <p>There is currently a population of about 328.2 million people in the united states.</p>
+  <p>By narrowing down based on criteria, we will see how many people match your personal preferences</p>
+  <p>If you don't want an option to be weighted in your final result please select "No preference"</p>
+  <label for="gender">Choose the gender preference of your match</label>
+  <select name="gender" id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br>
+  <br>
+  <label for="religion">Choose the religious preference of your match</label>
+  <select name="religion" id="religion">
+    <option value="no_pref">No preference</option>
+    <option value="christian">Christian</option>
+    <option value="catholic">Catholic</option>
+    <option value="muslim">Muslim</option>
+    <option value="agnostic">Agnostic</option>
+    <option value="athiest">Atheist</option>
+    <option value="judaism">Judaism</option>
+    <option value="buddhist">Buddhist</option>
+    <option value="hindu">Hindu</option>
+    <option value="other">Other/Spiritualist</option>
+  </select>
+  <br>
+  <br>
+  <label for="age">Choose the age preference of your match</label>
+  <select name="age" id="age">
+    <option value="no_pref">No preference</option>
+    <option value="1824">18-24 Years</option>
+    <option value="2534">25-34 Years</option>
+    <option value="3544">35-44 Years</option>
+    <option value="4554">45-54 Years</option>
+    <option value="5564">55-64 Years</option>
+    <option value="6574">65-74 Years</option>
+    <option value="7584">75-84 Years</option>
+    <option value="over84">&gt; 84 Years</option>
+  </select>
+  <br>
+  <br>
+  <label for="height">Choose the height preference of your match</label>
+  <select name="height" id="height">
+    <option value="no_pref">No preference</option>
+    <option value="under5">&lt; 5'</option>
+    <option value="04">5' - 5'4"</option>
+    <option value="58">5'5" - 5'8"</option>
+    <option value="90">5'9" - 6'</option>
+    <option value="over6">&gt; 6'</option>
+  </select>
+  <br>
+  <br>
+  <label for="weight">Choose the weight preference of your match</label>
+  <select name="weight" id="weight">
+    <option value="no_pref">No preference</option>
+    <option value="under100">&lt; 100lb</option>
+    <option value="101120">101lb - 120lb</option>
+    <option value="121140">121lb - 140lb</option>
+    <option value="141160">141lb - 160lb</option>
+    <option value="161180">161lb - 180lb</option>
+    <option value="181200">181lb - 200lb</option>
+    <option value="201220">201lb - 220lb</option>
+    <option value="over220">&gt; 220lb</option>
+  </select>
+  <br>
+  <br>
+  <label for="eyes">Choose the eye color preference of your match</label>
+  <select name="eyes" id="eyes">
+    <option value="no_pref">No preference</option>
+    <option value="brown">Brown</option>
+    <option value="green">Green</option>
+    <option value="hazel">Hazel</option>
+    <option value="blue">Blue</option>
+  </select>
+  <br>
+  <br>
+  <label for="hair">Choose the natural hair color preference of your match</label>
+  <select name="hair" id="hair">
+    <option value="no_pref">No preference</option>
+    <option value="black">Black</option>
+    <option value="brown">Brown</option>
+    <option value="blonde">Blonde</option>
+    <option value="red">Red</option>
+  </select>
+  <br>
+  <br>
+  <button onclick="answerSubmitted()">How many Fish</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
