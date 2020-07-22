@@ -1,7 +1,7 @@
 {
     "gender": {
-        "male": 49.1,
-        "female": 50.9
+        "male": 0.491,
+        "female": 0.509
     },
     "religion": {
         "christian": 0.466,

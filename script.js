@@ -18,6 +18,8 @@ function answerSubmitted() {
   const hair = document.getElementById("hair");
   const hr = hair.value;
 
+  var tochange = document.getElementById("to_replace");
+
   var myInit = {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -43,5 +45,10 @@ function answerSubmitted() {
         result.hair[hr];
       const finalResult = Math.round(runningpop);
       console.log(finalResult);
+      tochange.innerHTML = numberWithCommas(finalResult);
     });
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
