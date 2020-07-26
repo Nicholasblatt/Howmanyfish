@@ -1,5 +1,10 @@
 const population = 328200000;
+//const population = 40000000;
 var runningpop = population;
+
+var tochange = document.getElementById("to_replace");
+
+tochange.innerHTML = numberWithCommas(population) + " or 100% of Americans.";
 
 function answerSubmitted() {
   var runningpop = population;
@@ -13,12 +18,10 @@ function answerSubmitted() {
   const ht = height.value;
   const weight = document.getElementById("weight");
   const wt = weight.value;
-  const eyes = document.getElementById("eyes");
-  const e = eyes.value;
-  const hair = document.getElementById("hair");
-  const hr = hair.value;
-
-  var tochange = document.getElementById("to_replace");
+  const married = document.getElementById("married");
+  const m = married.value;
+  const child = document.getElementById("child");
+  const c = child.value;
 
   var myInit = {
     method: "GET",
@@ -45,10 +48,10 @@ function answerSubmitted() {
       var percentOfPpl =
         result.gender[g] *
         result.religion[r] *
-        result.age[a] *
+        result.age[g][a] *
         myBMInum *
-        result.eyes[e] *
-        result.hair[hr];
+        result.married[g][a][m] *
+        result.child[g][c][a];
       runningpop = runningpop * percentOfPpl;
       percentOfPpl *= 100;
       const finalResult = Math.round(runningpop);
@@ -56,7 +59,7 @@ function answerSubmitted() {
         numberWithCommas(finalResult) +
         " or " +
         percentOfPpl.toFixed(5).toString() +
-        "% of Americans";
+        "% of Americans.";
     });
 }
 
