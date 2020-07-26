@@ -34,21 +34,43 @@ function answerSubmitted() {
       return resp.json();
     })
     .then(function (result) {
-      runningpop =
-        runningpop *
+      var myBMInum = result.height[g][ht] * result.weight[g][wt];
+      if (wt != "no_pref" && ht != "no_pref") {
+        var bmiStr = bmiCalc(
+          result.weight.bmicalc[wt],
+          result.height.bmicalc[ht]
+        );
+        myBMInum = result.bmi[bmiStr];
+      }
+      var percentOfPpl =
         result.gender[g] *
         result.religion[r] *
         result.age[a] *
-        result.height[g][ht] *
-        result.weight[g][wt] *
+        myBMInum *
         result.eyes[e] *
         result.hair[hr];
+      runningpop = runningpop * percentOfPpl;
+      percentOfPpl *= 100;
       const finalResult = Math.round(runningpop);
-      console.log(finalResult);
-      tochange.innerHTML = numberWithCommas(finalResult);
+      tochange.innerHTML =
+        numberWithCommas(finalResult) +
+        " or " +
+        percentOfPpl.toFixed(5).toString() +
+        "% of Americans";
     });
 }
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function bmiCalc(lbs, inches) {
+  var myBMI = (703 * lbs) / (inches * inches);
+  if (myBMI < 17) {
+    myBMI = 17;
+  }
+  if (myBMI > 44) {
+    myBMI = 44;
+  }
+  return Math.round(myBMI).toString();
 }
