@@ -6,9 +6,6 @@ var tochange = document.getElementById("to_replace");
 
 tochange.innerHTML = numberWithCommas(population) + " or 100% of Americans.";
 
-var test = document.getElementsByTagName("tspan");
-test[0].remove;
-
 function answerSubmitted() {
   var runningpop = population;
   const gender = document.getElementById("gender");
