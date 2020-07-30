@@ -1,3 +1,4 @@
+currentWebsite = window.location.host;
 var simplemaps_usmap_mapdata = {
   main_settings: {
     //General settings
@@ -7,10 +8,10 @@ var simplemaps_usmap_mapdata = {
     popups: "detect",
 
     //State defaults
-    state_description: "State description",
+    state_description: "Click to get data for this state",
     state_color: "#88A4BC",
     state_hover_color: "#3B729F",
-    state_url: "https://google.com",
+    state_url: "http://" + currentWebsite,
     border_size: 1.5,
     border_color: "#ffffff",
     all_states_inactive: "no",
@@ -65,7 +66,7 @@ var simplemaps_usmap_mapdata = {
     div: "map",
     auto_load: "yes",
     rotate: "0",
-    url_new_tab: "yes",
+    url_new_tab: "no",
     images_directory: "default",
     import_labels: "no",
     fade_time: 0.1,
@@ -77,21 +78,21 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1416000&state=Hawaii",
     },
     AK: {
       name: "Alaska",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=730000&state=Alaska",
     },
     FL: {
       name: "Florida",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=21480000&state=Florida",
       inactive: "no",
     },
     NH: {
@@ -99,168 +100,190 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=1300000&state=New%20Hampshire",
     },
     VT: {
       name: "Vermont",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=623989&state=Vermont",
     },
     ME: {
       name: "Maine",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1344212&state=Maine",
     },
     RI: {
       name: "Rhode Island",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=1059361&state=Rhode%20Island",
     },
     NY: {
       name: "New York",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1416000&state=New%20York",
     },
     PA: {
       name: "Pennsylvania",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=12801989&state=Pennsylvania",
     },
     NJ: {
       name: "New Jersey",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=8882190&state=New%20Jersey",
     },
     DE: {
       name: "Delaware",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=973764&state=Delaware",
     },
     MD: {
       name: "Maryland",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=6045680&state=Maryland",
     },
     VA: {
       name: "Virginia",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=8535519&state=Virginia",
     },
     WV: {
       name: "West Virginia",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=1792147&state=West%20Virginia",
     },
     OH: {
       name: "Ohio",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=11689100&state=Ohio",
     },
     IN: {
       name: "Indiana",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=6732219&state=Indiana",
     },
     IL: {
       name: "Illinois",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=12671821&state=Illinois",
     },
     CT: {
       name: "Connecticut",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=3565287&state=Connecticut",
     },
     WI: {
       name: "Wisconsin",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=5822434&state=Wisconsin",
     },
     NC: {
       name: "North Carolina",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=10488084&state=North%20Carolina",
     },
     DC: {
       name: "District of Columbia",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=705,749&state=District%20of%20Columbia",
     },
     MA: {
       name: "Massachusetts",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=6949503&state=Massachusetts",
     },
     TN: {
       name: "Tennessee",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=6833174&state=Tennessee",
     },
     AR: {
       name: "Arkansas",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=3017825&state=Arkansas",
     },
     MO: {
       name: "Missouri",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=6137428&state=Missouri",
     },
     GA: {
       name: "Georgia",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=10617423&state=Georgia",
     },
     SC: {
       name: "South Carolina",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=5148714&state=South%20Carolina",
     },
     KY: {
       name: "Kentucky",
@@ -268,175 +291,184 @@ var simplemaps_usmap_mapdata = {
       color: "default",
       zoomable: "no",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=4467673&state=Kentucky",
     },
     AL: {
       name: "Alabama",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=4903185&state=Alabama",
     },
     LA: {
       name: "Louisiana",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=4648794&state=Louisiana",
     },
     MS: {
       name: "Mississippi",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=2976149&state=Mississippi",
     },
     IA: {
       name: "Iowa",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=3155070&state=Iowa",
     },
     MN: {
       name: "Minnesota",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=5639632&state=Minnesota",
     },
     OK: {
       name: "Oklahoma",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=3956971&state=Oklahoma",
     },
     TX: {
       name: "Texas",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=28995881&state=Texas",
     },
     NM: {
       name: "New Mexico",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=2096829&state=New%20Mexico",
     },
     KS: {
       name: "Kansas",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1416000&state=Kansas",
     },
     NE: {
       name: "Nebraska",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1416000&state=Nebraska",
     },
     SD: {
       name: "South Dakota",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=1416000&state=South%20Dekota",
     },
     ND: {
       name: "North Dakota",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=1416000&state=North%20Dekota",
     },
     WY: {
       name: "Wyoming",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=578759&state=Wyoming",
     },
     MT: {
       name: "Montana",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1068778&state=Montana",
     },
     CO: {
       name: "Colorado",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=5758736&state=Colorado",
     },
     UT: {
       name: "Utah",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=3205958&state=Utah",
     },
     AZ: {
       name: "Arizona",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=7278717&state=Arizona",
     },
     NV: {
       name: "Nevada",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=3080156&state=Nevada",
     },
     OR: {
       name: "Oregon",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=4217737&state=Oregon",
     },
     WA: {
       name: "Washington",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=7614893&state=Washington",
     },
     CA: {
       name: "California",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=39512223&state=California",
     },
     MI: {
       name: "Michigan",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=9986857&state=Michigan",
     },
     ID: {
       name: "Idaho",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1787065&state=Idaho",
     },
     GU: {
       name: "Guam",
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=165768&state=Guam",
       hide: "yes",
     },
     VI: {
@@ -444,7 +476,10 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=106977&state=Virgin%20Islands",
       hide: "yes",
     },
     PR: {
@@ -452,7 +487,8 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" + currentWebsite + "/?population=3194000&state=Puerto%20Rico",
       hide: "yes",
     },
     AS: {
@@ -460,7 +496,10 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=55465&state=American%20Samoa",
       hide: "yes",
     },
     MP: {
@@ -468,7 +507,10 @@ var simplemaps_usmap_mapdata = {
       description: "default",
       color: "default",
       hover_color: "default",
-      url: "default",
+      url:
+        "http://" +
+        currentWebsite +
+        "/?population=56882&state=Northern%20Mariana%20Islands",
       hide: "yes",
     },
   },
@@ -479,7 +521,7 @@ var simplemaps_usmap_mapdata = {
       lng: -74,
       description: "default",
       color: "default",
-      url: "default",
+      url: "http://" + currentWebsite + "/?population=1416000&state=Hawaii",
       type: "default",
       size: "default",
     },

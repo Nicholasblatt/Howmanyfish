@@ -1,10 +1,46 @@
-const population = 328200000;
+var population = 328200000;
 //const population = 40000000;
-var runningpop = population;
+var currstate = "the United States";
 
 var tochange = document.getElementById("to_replace");
+var stateChange = document.getElementById("state");
+var popChange = document.getElementById("population");
+var theMap = document.getElementById("map");
+var Bbutton = document.getElementById("bbutton");
 
-tochange.innerHTML = numberWithCommas(population) + " or 100% of Americans.";
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const newPop = urlParams.get("population");
+console.log(newPop);
+const state = urlParams.get("state");
+console.log(state);
+
+if (newPop != null) {
+  population = newPop;
+}
+
+if (state != null) {
+  currstate = state;
+  theMap.className += "hidden";
+  // TODO add back button to html
+  var pEle = document.createElement("p");
+  var button = document.createElement("BUTTON");
+  var buttonText = document.createTextNode("Back To Map");
+  button.appendChild(buttonText);
+  button.className += "backbutton";
+  button.addEventListener("click", function () {
+    window.location = "http://" + window.location.host;
+  });
+  pEle.appendChild(button);
+  Bbutton.appendChild(pEle);
+}
+
+var runningpop = population;
+
+stateChange.innerHTML = currstate;
+popChange.innerHTML = numberWithCommas(population);
+tochange.innerHTML =
+  numberWithCommas(population) + " or 100% of people in " + currstate + ".";
 
 function answerSubmitted() {
   var runningpop = population;
@@ -59,7 +95,9 @@ function answerSubmitted() {
         numberWithCommas(finalResult) +
         " or " +
         percentOfPpl.toFixed(5).toString() +
-        "% of Americans.";
+        "% of people in " +
+        currstate +
+        ".";
     });
 }
 
