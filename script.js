@@ -73,19 +73,11 @@ function answerSubmitted() {
       return resp.json();
     })
     .then(function (result) {
-      var myBMInum = result.height[g][ht] * result.weight[g][wt];
-      if (wt != "no_pref" && ht != "no_pref") {
-        var bmiStr = bmiCalc(
-          result.weight.bmicalc[wt],
-          result.height.bmicalc[ht]
-        );
-        myBMInum = result.bmi[bmiStr];
-      }
       var percentOfPpl =
         result.gender[g] *
         result.religion[r] *
         result.age[g][a] *
-        myBMInum *
+        result.height[g][ht][wt] *
         result.married[g][a][m] *
         result.child[g][c][a];
       runningpop = runningpop * percentOfPpl;
