@@ -1,0 +1,22 @@
+{
+  "name": "howmanyfish",
+  "version": "1.0.0",
+  "description": "To run this you must be serving. You can do this with these commands. ``` sh npm i -g serve cd yourFolder serve ```",
+  "main": "mapdata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicholasblatt/Howmanyfish.git"
+  },
+  "author": "Nicholas Blatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicholasblatt/Howmanyfish/issues"
+  },
+  "homepage": "https://github.com/Nicholasblatt/Howmanyfish#readme",
+  "dependencies": {
+    "semantic-ui-css": "^2.4.1"
+  }
+}
