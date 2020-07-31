@@ -11,9 +11,7 @@ var Bbutton = document.getElementById("bbutton");
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const newPop = urlParams.get("population");
-console.log(newPop);
 const state = urlParams.get("state");
-console.log(state);
 
 if (newPop != null) {
   population = newPop;
@@ -44,20 +42,13 @@ tochange.innerHTML =
 
 function answerSubmitted() {
   var runningpop = population;
-  const gender = document.getElementById("gender");
-  const g = gender.value;
-  const religion = document.getElementById("religion");
-  const r = religion.value;
-  const age = document.getElementById("age");
-  const a = age.value;
-  const height = document.getElementById("height");
-  const ht = height.value;
-  const weight = document.getElementById("weight");
-  const wt = weight.value;
-  const married = document.getElementById("married");
-  const m = married.value;
-  const child = document.getElementById("child");
-  const c = child.value;
+  var gender = $("#gender").val();
+  var religion = $("#religion").val();
+  var age = $("#age").val();
+  var height = $("#height").val();
+  var weight = $("#weight").val();
+  var married = $("#married").val();
+  var child = $("#child").val();
 
   var myInit = {
     method: "GET",
@@ -73,13 +64,98 @@ function answerSubmitted() {
       return resp.json();
     })
     .then(function (result) {
-      var percentOfPpl =
-        result.gender[g] *
-        result.religion[r] *
-        result.age[g][a] *
-        result.height[g][ht][wt] *
-        result.married[g][a][m] *
-        result.child[g][c][a];
+      var percentOfPpl = 1;
+      var runningPercent = 0;
+      const g = gender;
+
+      percentOfPpl *= result.gender[g];
+
+      // religion calculation
+      if (religion.includes("no_pref") || religion.length < 2) {
+        if (religion.length === 0) {
+          religion.push("no_pref");
+        }
+        percentOfPpl *= result.religion[religion[0]];
+      } else {
+        religion.forEach((item, i) => {
+          runningPercent += result.religion[item];
+        });
+        percentOfPpl *= runningPercent;
+        runningPercent = 0;
+      }
+
+      // age calculation
+      if (age.includes("no_pref") || age.length < 2) {
+        if (age.length === 0) {
+          age.push("no_pref");
+        }
+        percentOfPpl *= result.age[g][age[0]];
+      } else {
+        age.forEach((item, i) => {
+          runningPercent += result.age[g][item];
+        });
+        percentOfPpl *= runningPercent;
+        runningPercent = 0;
+      }
+
+      // height and weight calculation
+      if (height.includes("no_pref") || height.length === 0) {
+        height = [];
+        height.push("no_pref");
+      }
+      if (weight.includes("no_pref") || weight.length === 0) {
+        weight = [];
+        weight.push("no_pref");
+      }
+      height.forEach((h, i) => {
+        weight.forEach((w, j) => {
+          runningPercent += result.height[g][h][w];
+        });
+      });
+      percentOfPpl *= runningPercent;
+      runningPercent = 0;
+
+      // marriage status calculation
+      if (age.includes("no_pref") || age.length === 0) {
+        age = [];
+        age.push("no_pref");
+      }
+      if (married.includes("no_pref") || married.length === 0) {
+        percentOfPpl *= 1;
+      } else {
+        age.forEach((a, i) => {
+          married.forEach((m, j) => {
+            runningPercent += result.married[g][a][m];
+          });
+        });
+        percentOfPpl *= runningPercent;
+        runningPercent = 0;
+      }
+
+      // childless or not calculation
+      if (child.includes("no_pref") || child.length === 0) {
+        percentOfPpl *= 1;
+      } else {
+        if (age.includes("no_pref") || age.length === 0) {
+          age = [];
+          age.push("no_pref");
+        }
+        child.forEach((c, i) => {
+          age.forEach((age, j) => {
+            runningPercent += result.child[g][c][age];
+          });
+        });
+        percentOfPpl *= runningPercent;
+        runningPercent = 0;
+      }
+
+      // var percentOfPpl =
+      //   result.gender[g] *
+      //   result.religion[r] *
+      //   result.age[g][a] *
+      //   result.height[g][ht][wt] *
+      //   result.married[g][a][m] *
+      //   result.child[g][c][a];
       runningpop = runningpop * percentOfPpl;
       percentOfPpl *= 100;
       const finalResult = Math.round(runningpop);
