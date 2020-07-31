@@ -2,7 +2,7 @@
   "name": "howmanyfish",
   "version": "1.0.0",
   "description": "To run this you must be serving. You can do this with these commands. ``` sh npm i -g serve cd yourFolder serve ```",
-  "main": "mapdata.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nicholasblatt/Howmanyfish#readme",
   "dependencies": {
+    "semantic": "0.0.1",
     "semantic-ui-css": "^2.4.1"
   }
 }
