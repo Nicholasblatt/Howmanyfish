@@ -115,7 +115,6 @@ function answerSubmitted() {
       percentOfPpl *= runningPercent;
       runningPercent = 0;
 
-      // currently broken with multiple selects
       // marriage status calculation
       if (age.includes("no_pref") || age.length === 0) {
         age = [];
@@ -124,16 +123,17 @@ function answerSubmitted() {
       if (married.includes("no_pref") || married.length === 0) {
         percentOfPpl *= 1;
       } else {
+        const splitSize = 1 / age.length;
         age.forEach((a, i) => {
           married.forEach((m, j) => {
             runningPercent += result.married[g][a][m];
           });
         });
+        runningPercent *= splitSize;
         percentOfPpl *= runningPercent;
         runningPercent = 0;
       }
 
-      // currently broken with multiple selects
       // childless or not calculation
       if (child.includes("no_pref") || child.length === 0) {
         percentOfPpl *= 1;
@@ -142,12 +142,13 @@ function answerSubmitted() {
           age = [];
           age.push("no_pref");
         }
-        child.forEach((c, i) => {
-          age.forEach((age, j) => {
-            runningPercent += result.child[g][c][age];
-          });
+        const splitSize = 1 / age.length;
+        age.forEach((age, j) => {
+          runningPercent += result.child[g][child][age];
         });
+        runningPercent *= splitSize;
         percentOfPpl *= runningPercent;
+        console.log(runningPercent);
         runningPercent = 0;
       }
 
