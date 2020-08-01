@@ -115,6 +115,7 @@ function answerSubmitted() {
       percentOfPpl *= runningPercent;
       runningPercent = 0;
 
+      // currently broken with multiple selects
       // marriage status calculation
       if (age.includes("no_pref") || age.length === 0) {
         age = [];
@@ -132,6 +133,7 @@ function answerSubmitted() {
         runningPercent = 0;
       }
 
+      // currently broken with multiple selects
       // childless or not calculation
       if (child.includes("no_pref") || child.length === 0) {
         percentOfPpl *= 1;
