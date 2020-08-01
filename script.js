@@ -13,11 +13,6 @@ const urlParams = new URLSearchParams(queryString);
 const newPop = urlParams.get("population");
 const state = urlParams.get("state");
 
-// Material Select Initialization
-$(document).ready(function () {
-  $(".mdb-select").materialSelect();
-});
-
 if (newPop != null) {
   population = newPop;
 }
