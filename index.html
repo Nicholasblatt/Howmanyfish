@@ -9,6 +9,7 @@
     <script src="Scripts/usmap.js"></script>
     <meta name="description" content="How Many Fish">
     <meta name="author" content="Nicholas Blatt">
+    <link rel="icon" href="icons/FAVPNG_fish-cartoon-drawing_gSG7LqCc.png">
     <link rel="stylesheet" type="text/css" href="MSFmultiSelect.css"/>
     <link rel="stylesheet" href="styles.css">
 
@@ -16,16 +17,20 @@
 
   <body>
     <div id="bbutton"></div>
-    <h1 id="head">How many fish are in your sea?</h1>
+    <h1 id="head">How many fish are in my sea?</h1>
     <div id="map"></div>
     <p style="display:inline">There is currently a population of about <div id="population" style="display:inline">0</div> people in <div id="state" style="display:inline">the united states</div>.</p>
-    <p>By narrowing down based on criteria, we will see how many people match your personal preferences</p>
-    <p>If you don't want an option to be weighted in your final result please select "No preference"</p>
+    <p>By narrowing down based on criteria, we will see how many people in the area match your personal preferences.</p>
+    <p>If you don't want an option to be weighted in your final result please select "No preference".</p>
+    <p>You can select multiple preferences for some criteria.</p>
     <label for="gender">Choose the gender preference of your potential partner</label>
-    <select name="gender" id="gender">
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-    </select>
+    <div class="custom-select" style="width:200px;">
+      <select name="gender" id="gender">
+        <option value="no_select">Select Gender:</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
     <br>
     <br>
     <div id="religion-div">
@@ -127,12 +132,15 @@
     <br>
     <br>
     <label for="child">Choose the parental status of your potential partner</label>
-    <br>
-    <select name="child" id="child">
-      <option value="no_pref">No preference</option>
-      <option value="child">Has Child or Children</option>
-      <option value="childless">Childless</option>
-    </select>
+
+    <div class="custom-select" style="width:200px;">
+      <select name="child" id="child">
+        <option value="no_pref">Select Status:</option>
+        <option value="no_pref">No preference</option>
+        <option value="child">Has Child or Children</option>
+        <option value="childless">Childless</option>
+      </select>
+    </div>
     <br>
     <br>
     <button onclick="answerSubmitted()">How many Fish</button>
@@ -141,7 +149,7 @@
     <script src="Scripts/MSFmultiSelect.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Scripts/script.js"></script>
-
+    <script src="Scripts/selectMod.js"></script>
     <script>
       var Rselect = new MSFmultiSelect(document.querySelector("#religion"), {
         onChange: function (checked, value, instance) {

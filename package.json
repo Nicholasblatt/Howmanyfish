@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Nicholasblatt/Howmanyfish#readme",
   "dependencies": {
     "semantic": "0.0.1",
-    "semantic-ui-css": "^2.4.1"
+    "semantic-ui-css": "^2.4.1",
+    "tail.select": "^0.5.15"
   }
 }

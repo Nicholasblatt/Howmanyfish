@@ -68,6 +68,13 @@ function answerSubmitted() {
       var runningPercent = 0;
       const g = gender;
 
+      if (gender === "no_select") {
+        tochange.innerHTML = "Pick a Gender to continue.";
+        tochange.className += "alertMessage";
+      } else {
+        tochange.classList.remove("alertMessage");
+      }
+
       percentOfPpl *= result.gender[g];
 
       // religion calculation
@@ -162,6 +169,8 @@ function answerSubmitted() {
       runningpop = runningpop * percentOfPpl;
       percentOfPpl *= 100;
       const finalResult = Math.round(runningpop);
+      console.log(gender === "no_select");
+
       tochange.innerHTML =
         numberWithCommas(finalResult) +
         " or " +
