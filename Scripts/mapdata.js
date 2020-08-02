@@ -515,23 +515,16 @@ var simplemaps_usmap_mapdata = {
     },
   },
   locations: {
-    "0": {
-      name: "New York",
-      lat: 40.71,
-      lng: -74,
-      description: "default",
-      color: "default",
-      url: "http://" + currentWebsite + "/?population=1416000&state=Hawaii",
-      type: "default",
-      size: "default",
-    },
-    "1": {
-      name: "Anchorage",
-      lat: 61.2180556,
-      lng: -149.9002778,
-      color: "default",
-      type: "circle",
-    },
+    // "0": {
+    //   name: "New York",
+    //   lat: 40.71,
+    //   lng: -74,
+    //   description: "default",
+    //   color: "blue",
+    //   url: "http://" + currentWebsite + "/?population=1416000&state=Hawaii",
+    //   type: "default",
+    //   size: "default",
+    // },
   },
   labels: {
     NH: {
