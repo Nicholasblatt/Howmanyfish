@@ -2,11 +2,14 @@ var population = 328200000;
 //const population = 40000000;
 var currstate = "the United States";
 
+const currentWebsite = window.location.host;
+
 var tochange = document.getElementById("to_replace");
 var stateChange = document.getElementById("state");
 var popChange = document.getElementById("population");
 var theMap = document.getElementById("map");
 var Bbutton = document.getElementById("bbutton");
+var numPpl = document.getElementById("number_people");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -57,7 +60,7 @@ function answerSubmitted() {
     cache: "default",
   };
 
-  var myReq = new Request("http://localhost:5000/data.json", myInit);
+  var myReq = new Request("http://" + currentWebsite + "/data.json", myInit);
 
   var result = fetch(myReq)
     .then(function (resp) {
@@ -155,7 +158,6 @@ function answerSubmitted() {
         });
         runningPercent *= splitSize;
         percentOfPpl *= runningPercent;
-        console.log(runningPercent);
         runningPercent = 0;
       }
 
@@ -166,10 +168,12 @@ function answerSubmitted() {
       //   result.height[g][ht][wt] *
       //   result.married[g][a][m] *
       //   result.child[g][c][a];
+
+      const numOfPpl = percentToPeople(percentOfPpl);
+      numPpl.innerHTML = "That's about 1 in every " + numOfPpl + " people.";
       runningpop = runningpop * percentOfPpl;
       percentOfPpl *= 100;
       const finalResult = Math.round(runningpop);
-      console.log(gender === "no_select");
 
       tochange.innerHTML =
         numberWithCommas(finalResult) +
@@ -194,4 +198,9 @@ function bmiCalc(lbs, inches) {
     myBMI = 44;
   }
   return Math.round(myBMI).toString();
+}
+
+function percentToPeople(percent) {
+  var perBottom = Math.round(1 / percent);
+  return perBottom.toString();
 }

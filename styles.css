@@ -80,6 +80,10 @@ h1 {
     color: darkblue;
 }
 
+#number_people {
+    color: #1a53ff;
+}
+
 /* The container must be positioned relative: */
 .custom-select {
     position: relative;
