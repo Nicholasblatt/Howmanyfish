@@ -202,5 +202,5 @@ function bmiCalc(lbs, inches) {
 
 function percentToPeople(percent) {
   var perBottom = Math.round(1 / percent);
-  return perBottom.toString();
+  return numberWithCommas(perBottom);
 }

@@ -19,11 +19,14 @@
     <div id="bbutton"></div>
     <h1 id="head">How many fish are in my sea?</h1>
     <div id="map"></div>
-    <p style="display:inline">There is currently a population of about <div id="population" style="display:inline">0</div> people in <div id="state" style="display:inline">the united states</div>.</p>
-    <p>By narrowing down based on criteria, we will see how many people in the area match your personal preferences.</p>
-    <p>If you don't want an option to be weighted in your final result please select "No preference".</p>
-    <p>You can select multiple preferences for some criteria.</p>
-    <label for="gender">Choose the gender preference of your potential partner</label>
+    <div class="main-text">
+      <p style="display:inline">There is currently a population of about <div id="population" style="display:inline">0</div> people in <div id="state" style="display:inline">the united states</div>.</p>
+      <p>By narrowing down based on criteria, we will see how many people in the area match your personal preferences.</p>
+      <p>If you don't want an option to be weighted in your final result please select "No preference".</p>
+      <p>Choosing "No preference" will cause a category to be unweighted reguardless of any other selections made.</p>
+      <p>You can select multiple preferences for some criteria.</p>
+    </div>
+    <label class="select-label" for="gender">Choose the gender preference of your potential partner</label>
     <div class="custom-select" style="width:200px;">
       <select name="gender" id="gender">
         <option value="no_select">Select Gender:</option>
@@ -34,7 +37,7 @@
     <br>
     <br>
     <div id="religion-div">
-      <label for="religion">Choose the religious preference of your potential partner</label>
+      <label class="select-label" for="religion">Choose the religious preferences of your potential partner</label>
       <select name="religion" id="religion" multiple size="3">
         <option value="no_pref">No preference</option>
         <option value="christian">Christian</option>
@@ -51,7 +54,7 @@
     <br>
     <br>
     <div id="age-div">
-      <label for="age">Choose the age preference of your potential partner</label>
+      <label class="select-label" for="age">Choose the age preferences of your potential partner</label>
       <select name="age" id="age" multiple size="3">
         <option value="no_pref">No preference</option>
         <option value="1820">18-19 Years</option>
@@ -74,11 +77,11 @@
     <br>
     <br>
     <div id="height-div">
-      <label for="height">Choose the height preference of your potential partner</label>
+      <label class="select-label" for="height">Choose the height preferences of your potential partner</label>
       <select name="height" id="height" multiple size="3">
         <option value="no_pref">No preference</option>
         <option value="<60">&lt; 5'</option>
-    <option value="60">5' 0"</option>
+        <option value="60">5' 0"</option>
         <option value="61">5' 1"</option>
         <option value="62">5' 2"</option>
         <option value="63">5' 3"</option>
@@ -97,7 +100,7 @@
     <br>
     <br>
     <div id="weight-div">
-      <label for="weight">Choose the weight preference of your potential partner</label>
+      <label class="select-label" for="weight">Choose the weight preferences of your potential partner</label>
       <select name="weight" id="weight" multiple size="3">
         <option value="no_pref">No preference</option>
         <option value="under100">&lt; 100lb</option>
@@ -119,7 +122,7 @@
     <br>
     <br>
     <div id="married-div">
-      <label for="married">Choose the marital status of your potential partner</label>
+      <label class="select-label" for="married">Choose the marital status of your potential partner</label>
       <select name="married" id="married" multiple>
         <option value="no_pref">No preference</option>
         <option value="never">Never Married</option>
@@ -131,8 +134,7 @@
     </div>
     <br>
     <br>
-    <label for="child">Choose the parental status of your potential partner</label>
-
+    <label class="select-label" for="child">Choose the parental status of your potential partner</label>
     <div class="custom-select" style="width:200px;">
       <select name="child" id="child">
         <option value="no_pref">Select Status:</option>
