@@ -201,6 +201,9 @@ function bmiCalc(lbs, inches) {
 }
 
 function percentToPeople(percent) {
+  if (percent === 0) {
+    return "non-existant";
+  }
   var perBottom = Math.round(1 / percent);
   return numberWithCommas(perBottom);
 }
