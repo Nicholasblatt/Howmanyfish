@@ -10,6 +10,7 @@ var popChange = document.getElementById("population");
 var theMap = document.getElementById("map");
 var Bbutton = document.getElementById("bbutton");
 var numPpl = document.getElementById("number_people");
+var statePic = document.getElementById("state-pic");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -57,6 +58,14 @@ if (state != null) {
   });
   pEle.appendChild(button);
   Bbutton.appendChild(pEle);
+
+  var img = new Image();
+
+  img.onload = function () {
+    statePic.appendChild(img);
+  };
+
+  img.src = "states/" + currstate + ".png";
 }
 
 var runningpop = population;
