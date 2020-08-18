@@ -31,20 +31,17 @@
           <p>You can select multiple preferences for some criteria. You may get 0 people if your percentage is extremely low.</p>
         </div>
 
-
         <div class="select-box">
           <label class="select-label" for="gender">Choose the gender preference of your potential partner</label>
-          <select class="selectpicker" name="gender" id="gender">
+          <select class="select-white-part" name="gender" id="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="female">Other</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="religion">Choose the religious preferences of your potential partner</label>
-          <select name="religion" id="religion" multiple>
+          <select class="select-white-part" name="religion" id="religion" multiple size="4">
             <option value="christian">Christian</option>
             <option value="catholic">Catholic</option>
             <option value="muslim">Muslim</option>
@@ -56,11 +53,10 @@
             <option value="other">Other/Spiritualist</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="age">Choose the age preferences of your potential partner</label>
-          <select name="age" id="age" multiple>
+          <select class="select-white-part" name="age" id="age" multiple size="4">
             <option value="under18">&lt; 18 Years</option>
             <option value="1820">18-19 Years</option>
             <option value="2024">20-24 Years</option>
@@ -79,11 +75,10 @@
             <option value="over84">&gt; 84 Years</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="height">Choose the height preferences of your potential partner</label>
-          <select name="height" id="height" multiple>
+          <select class="select-white-part" name="height" id="height" multiple size="4">
             <option value="<60">&lt; 5'</option>
             <option value="60">5' 0"</option>
             <option value="61">5' 1"</option>
@@ -101,11 +96,10 @@
             <option value=">72">&gt; 6'</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="weight">Choose the weight preferences of your potential partner</label>
-          <select name="weight" id="weight" multiple>
+          <select class="select-white-part" name="weight" id="weight" multiple size="4">
             <option value="under100">&lt; 100lb</option>
             <option value="100109">100lb - 109lb</option>
             <option value="110119">110lb - 119lb</option>
@@ -122,11 +116,10 @@
             <option value="over220">220+lb</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="married">Choose the marital status of your potential partner</label>
-          <select name="married" id="married" multiple>
+          <select class="select-white-part" name="married" id="married" multiple size="4">
             <option value="never">Never Married</option>
             <option value="divorced">Divorced</option>
             <option value="married">Married</option>
@@ -134,24 +127,24 @@
             <option value="widowed">Widowed</option>
           </select>
         </div>
-        
-        
+
         <div class="select-box">
           <label class="select-label" for="child">Choose the parental status of your potential partner</label>
-          <select name="child" id="child">
+          <select class="select-white-part" name="child" id="child">
             <option value="no_pref">No preference</option>
             <option value="child">Has Child or Children</option>
             <option value="childless">Childless</option>
           </select>
         </div>
-        
-        
+
         <button onclick="answerSubmitted()" class="checkFish">How many Fish</button>
-        <h3> The amount of fish in your sea is: <div id="to_replace">328,200,000</div>
-          <div style="display:inline" id="number_people"></div>
-        </h3>
+        <span class="answer-part">
+          <h3> The amount of fish in your sea is: <div id="to_replace">328,200,000</div>
+            <div style="display:inline" id="number_people"></div>
+          </h3>
+        </span>
       </div>
-  </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./vanSel/vanillaSelectBox.js"></script>
     <script src="Scripts/script.js"></script>

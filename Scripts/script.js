@@ -17,25 +17,25 @@ const newPop = urlParams.get("population");
 const state = urlParams.get("state");
 
 // vanilla select
-new vanillaSelectBox("#gender", {
+const genderSelect = new vanillaSelectBox("#gender", {
   placeHolder: "Male",
 });
-new vanillaSelectBox("#religion", {
+const religionSelect = new vanillaSelectBox("#religion", {
   placeHolder: "Religion",
 });
-new vanillaSelectBox("#age", {
+const ageSelect = new vanillaSelectBox("#age", {
   placeHolder: "Age",
 });
-new vanillaSelectBox("#height", {
+const heightSelect = new vanillaSelectBox("#height", {
   placeHolder: "Height",
 });
-new vanillaSelectBox("#weight", {
+const weightSelect = new vanillaSelectBox("#weight", {
   placeHolder: "Weight",
 });
-new vanillaSelectBox("#married", {
+const marriedSelect = new vanillaSelectBox("#married", {
   placeHolder: "Married",
 });
-new vanillaSelectBox("#child", {
+const childSelect = new vanillaSelectBox("#child", {
   placeHolder: "Child",
 });
 
