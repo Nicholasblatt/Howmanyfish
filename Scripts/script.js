@@ -16,6 +16,29 @@ const urlParams = new URLSearchParams(queryString);
 const newPop = urlParams.get("population");
 const state = urlParams.get("state");
 
+// vanilla select
+new vanillaSelectBox("#gender", {
+  placeHolder: "Male",
+});
+new vanillaSelectBox("#religion", {
+  placeHolder: "Religion",
+});
+new vanillaSelectBox("#age", {
+  placeHolder: "Age",
+});
+new vanillaSelectBox("#height", {
+  placeHolder: "Height",
+});
+new vanillaSelectBox("#weight", {
+  placeHolder: "Weight",
+});
+new vanillaSelectBox("#married", {
+  placeHolder: "Married",
+});
+new vanillaSelectBox("#child", {
+  placeHolder: "Child",
+});
+
 if (newPop != null) {
   population = newPop;
 }

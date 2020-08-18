@@ -2,7 +2,7 @@ currentWebsite = window.location.host;
 var simplemaps_usmap_mapdata = {
   main_settings: {
     //General settings
-    width: "700", //or 'responsive'
+    width: "responsive", //or 'responsive'
     background_color: "#FFFFFF",
     background_transparent: "yes",
     popups: "detect",

@@ -24,6 +24,7 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 17px;
     color: darkblue;
+    margin-bottom: 100px;
 
 }
 
@@ -48,11 +49,16 @@ h1 {
     font-size: 20px;
     color: blue;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 
 @media all and (max-width: 30em) {
     .checkFish {
+        display: block;
+        margin: 0.4em auto;
+    }
+    .backbutton {
         display: block;
         margin: 0.4em auto;
     }
@@ -75,15 +81,8 @@ h1 {
 }
 
 .backbutton:hover {
-    color: blue;
+    color: rgb(87, 87, 224);
     background-color: #ffffff;
-}
-
-@media all and (max-width: 30em) {
-    .backbutton {
-        display: block;
-        margin: 0.4em auto;
-    }
 }
 
 #to_replace.alertMessage {
@@ -99,67 +98,26 @@ h1 {
     color: #1a53ff;
 }
 
-/* The container must be positioned relative: */
-.custom-select {
-    position: relative;
-    font-family: Arial;
+/* stephen start */
+.body-container {
+    margin: 100px;
+    display: flex;
 }
 
-.custom-select select {
-    display: none;
-    /*hide original SELECT element: */
+/* Map */
+.map-container {
+    margin: 100px;
+}
+#map {
+    width: 40vw;
 }
 
-.select-selected {
-    background-color: white;
-    font-size: 15px;
+.text-container {
+    margin: 100px;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,
-.select-selected {
-    color: black;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-    position: absolute;
-    background-color: white;
-    font-size: 15px;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-    display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+.select-box {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
