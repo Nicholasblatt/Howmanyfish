@@ -16,7 +16,6 @@
   </head>
 
   <body>
-
     <div id="bbutton"></div>
     <h1 id="head">How many fish are in my sea?</h1>
     <div id="map"></div>
@@ -28,31 +27,123 @@
       <p>You can select multiple preferences for some criteria. You may get 0 people if your percentage is extremely low.</p>
     </div>
     <label class="select-label" for="gender">Choose the gender preference of your potential partner</label>
-    <span class="gender"></span>
+    <div class="custom-select" style="width:200px;">
+      <select name="gender" id="gender">
+        <option value="no_select">Select Gender:</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
     <br>
     <br>
-    <label class="select-label" for="religion">Choose the religious preferences of your potential partner</label>
-    <span class="religion"></span>
+    <div id="religion-div">
+      <label class="select-label" for="religion">Choose the religious preferences of your potential partner</label>
+      <select name="religion" id="religion" multiple size="3">
+        <option value="no_pref">No preference</option>
+        <option value="christian">Christian</option>
+        <option value="catholic">Catholic</option>
+        <option value="muslim">Muslim</option>
+        <option value="agnostic">Agnostic</option>
+        <option value="athiest">Atheist</option>
+        <option value="judaism">Judaism</option>
+        <option value="buddhist">Buddhist</option>
+        <option value="hindu">Hindu</option>
+        <option value="other">Other/Spiritualist</option>
+      </select>
+    </div>
     <br>
     <br>
-    <label class="select-label" for="age">Choose the age preferences of your potential partner</label>
-    <span class="age"></span>
+    <div id="age-div">
+      <label class="select-label" for="age">Choose the age preferences of your potential partner</label>
+      <select name="age" id="age" multiple size="3">
+        <option value="no_pref">No preference</option>
+        <option value="under18">&lt; 18 Years</option>
+        <option value="1820">18-19 Years</option>
+        <option value="2024">20-24 Years</option>
+        <option value="2529">25-29 Years</option>
+        <option value="3034">30-34 Years</option>
+        <option value="3539">35-39 Years</option>
+        <option value="4044">40-44 Years</option>
+        <option value="4549">45-49 Years</option>
+        <option value="5054">50-54 Years</option>
+        <option value="5559">55-59 Years</option>
+        <option value="6064">60-64 Years</option>
+        <option value="6569">65-69 Years</option>
+        <option value="7074">70-74 Years</option>
+        <option value="7579">75-79 Years</option>
+        <option value="8084">80-84 Years</option>
+        <option value="over84">&gt; 84 Years</option>
+      </select>
+    </div>
     <br>
     <br>
-    <label class="select-label" for="height">Choose the height preferences of your potential partner</label>
-    <span class="height"></span>
+    <div id="height-div">
+      <label class="select-label" for="height">Choose the height preferences of your potential partner</label>
+      <select name="height" id="height" multiple size="3">
+        <option value="no_pref">No preference</option>
+        <option value="<60">&lt; 5'</option>
+        <option value="60">5' 0"</option>
+        <option value="61">5' 1"</option>
+        <option value="62">5' 2"</option>
+        <option value="63">5' 3"</option>
+        <option value="64">5' 4"</option>
+        <option value="65">5' 5"</option>
+        <option value="66">5' 6"</option>
+        <option value="67">5' 7"</option>
+        <option value="68">5' 8"</option>
+        <option value="69">5' 9"</option>
+        <option value="70">5' 10"</option>
+        <option value="71">5' 11"</option>
+        <option value="72">6' 0"</option>
+        <option value=">72">&gt; 6'</option>
+      </select>
+    </div>
     <br>
     <br>
-    <label class="select-label" for="height">Choose the weight preferences of your potential partner</label>
-    <span class="weight"></span>
+    <div id="weight-div">
+      <label class="select-label" for="weight">Choose the weight preferences of your potential partner</label>
+      <select name="weight" id="weight" multiple size="3">
+        <option value="no_pref">No preference</option>
+        <option value="under100">&lt; 100lb</option>
+        <option value="100109">100lb - 109lb</option>
+        <option value="110119">110lb - 119lb</option>
+        <option value="120129">120lb - 129lb</option>
+        <option value="130139">130lb - 139lb</option>
+        <option value="140149">140lb - 149lb</option>
+        <option value="150159">150lb - 159lb</option>
+        <option value="160169">160lb - 169lb</option>
+        <option value="170179">170lb - 179lb</option>
+        <option value="180189">180lb - 189lb</option>
+        <option value="190199">190lb - 199lb</option>
+        <option value="200209">200lb - 209lb</option>
+        <option value="210219">210lb - 219lb</option>
+        <option value="over220">220+lb</option>
+      </select>
+    </div>
     <br>
     <br>
-    <label class="select-label" for="married">Choose the marital status of your potential partner</label>
-    <span class="married"></span>
+    <div id="married-div">
+      <label class="select-label" for="married">Choose the marital status of your potential partner</label>
+      <select name="married" id="married" multiple>
+        <option value="no_pref">No preference</option>
+        <option value="never">Never Married</option>
+        <option value="divorced">Divorced</option>
+        <option value="married">Married</option>
+        <option value="separated">Separated</option>
+        <option value="widowed">Widowed</option>
+      </select>
+    </div>
     <br>
     <br>
     <label class="select-label" for="child">Choose the parental status of your potential partner</label>
-    <span class="child"></span>
+    <div class="custom-select" style="width:200px;">
+      <select name="child" id="child">
+        <option value="no_pref">Select Status:</option>
+        <option value="no_pref">No preference</option>
+        <option value="child">Has Child or Children</option>
+        <option value="childless">Childless</option>
+      </select>
+    </div>
     <br>
     <br>
     <button onclick="answerSubmitted()" class="checkFish">How many Fish</button>
@@ -60,10 +151,51 @@
       <div style="display:inline" id="number_people"></div>
     </h3>
 
-    <script src="Scripts/bundle.min.js"></script>
     <script src="Scripts/MSFmultiSelect.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Scripts/script.js"></script>
     <script src="Scripts/selectMod.js"></script>
+    <script>
+      var Rselect = new MSFmultiSelect(document.querySelector("#religion"), {
+        onChange: function (checked, value, instance) {
+          console.log(checked, value, instance);
+        },
+        selectAll: true,
+        appendTo: "#religion-div",
+        //readOnly:true
+      });
+      var Aselect = new MSFmultiSelect(document.querySelector("#age"), {
+        onChange: function (checked, value, instance) {
+          console.log(checked, value, instance);
+        },
+        selectAll: true,
+        appendTo: "#age-div",
+        //readOnly:true
+      });
+      var Hselect = new MSFmultiSelect(document.querySelector("#height"), {
+        onChange: function (checked, value, instance) {
+          console.log(checked, value, instance);
+        },
+        selectAll: true,
+        appendTo: "#height-div",
+        //readOnly:true
+      });
+      var Wselect = new MSFmultiSelect(document.querySelector("#weight"), {
+        onChange: function (checked, value, instance) {
+          console.log(checked, value, instance);
+        },
+        selectAll: true,
+        appendTo: "#weight-div",
+        //readOnly:true
+      });
+      var Mselect = new MSFmultiSelect(document.querySelector("#married"), {
+        onChange: function (checked, value, instance) {
+          console.log(checked, value, instance);
+        },
+        selectAll: true,
+        appendTo: "#married-div",
+        //readOnly:true
+      });
+    </script>
   </body>
 </html>
