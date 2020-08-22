@@ -373,7 +373,7 @@ var simplemaps_usmap_mapdata = {
       url:
         "http://" +
         currentWebsite +
-        "/?population=1416000&state=South%20Dekota",
+        "/?population=1416000&state=South%20Dakota",
     },
     ND: {
       name: "North Dakota",
@@ -383,7 +383,7 @@ var simplemaps_usmap_mapdata = {
       url:
         "http://" +
         currentWebsite +
-        "/?population=1416000&state=North%20Dekota",
+        "/?population=1416000&state=North%20Dakota",
     },
     WY: {
       name: "Wyoming",

@@ -34,10 +34,10 @@ const weightSelect = new vanillaSelectBox("#weight", {
   placeHolder: "Weight",
 });
 const marriedSelect = new vanillaSelectBox("#married", {
-  placeHolder: "Married",
+  placeHolder: "Martital Status",
 });
 const childSelect = new vanillaSelectBox("#child", {
-  placeHolder: "Child",
+  placeHolder: "Parental Status",
 });
 
 if (newPop != null) {
