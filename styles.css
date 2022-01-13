@@ -1,6 +1,6 @@
 body {
     background-image: url("icons/frank-mckenna-eXHeq48Z-Q4-unsplash.jpg");
-    width: max-content;
+    width: 100vw;
     margin: auto;
 }
 
@@ -103,7 +103,6 @@ h1 {
 /* stephen start */
 .body-container {
     margin: 100px;
-    display: flex;
 }
 
 /* Map */
@@ -112,7 +111,8 @@ h1 {
 }
 
 #map {
-    width: 40vw;
+    width: 50vw;
+    body: center;
 }
 
 .text-container {
