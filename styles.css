@@ -1,5 +1,5 @@
 body {
-    background-image: url("icons/frank-mckenna-eXHeq48Z-Q4-unsplash.jpg");
+    background-image: url("icons/pexels-valdemaras-d-2273642.jpg");
     width: 100vw;
     margin: auto;
 }
@@ -111,14 +111,14 @@ h1 {
 }
 
 #map {
-    width: 50vw;
+    width: 60vw;
     body: center;
 }
 
 .text-container {
     margin: 100px;
     padding: 20px;
-    background-color: rgba(125, 125, 219, 0.2);
+    background-color: rgba(125, 125, 219, 0.4);
     outline: 1px solid;
 }
 
